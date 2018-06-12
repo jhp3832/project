@@ -1,0 +1,87 @@
+.scoreBoard{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    height: 20%;
+	
+}
+
+.scoreBoard table{
+	table-layout: auto;
+}
+
+.scoreBoard td, .scoreBoard th{
+	border: 1px solid black;
+	/*padding: 8px;*/
+	width: 10%;
+}
+
+.scoreBoard th{
+	border: 3px solid black;
+	background-color: black;
+}
+
+.scoreBoard td{
+	height:100%;
+}
+
+#blank{
+	background-color: white;
+}
+#coin img{
+	width: 70%;
+	height:10%;
+	display: block;
+	margin: auto;
+}
+
+#military{
+	background-color: #9b0101;
+}
+
+#stages{
+	background-color: white;
+}
+
+#stages img{
+	width: 40%;
+	height: 60%;
+	display:block;
+	margin:auto;
+}
+
+#blue{
+	background-color: #0044b2;
+}
+
+#yellow{
+	background-color:#cad102;
+}
+
+#science{
+	background-color:#197000;
+}
+
+#purple{
+	background-color: #5100a8;
+}
+
+#leaders img{
+	display: block;
+	width: 100%;
+	height: 50%;
+}
+
+#tiles img{
+	display:block;
+	width: 100%;
+	height: 55%;
+}
+
+#enterButton{
+	display:inline-block;
+}
+
+#numPlayerForm{
+	display:inline-block;
+}

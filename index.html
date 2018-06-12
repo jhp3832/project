@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title>Score Tracker</title>
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+</head>
+<body>
+	<button type="button" onClick="addPlayers(1)">Add New Player</button><br>
+	<form id='numPlayerForm' name="numPlayer" onsubmit="addPlayers(playerNumber.value)">
+		Number of Players
+		<input type="number" id="playerNumber" value=0>
+	</form>
+	<button id='enterButton' type="button" onClick="addPlayers(playerNumber)">Enter</button>
+	<table class="scoreBoard"> 
+		<tbody id="scoreBoardBody">
+		<tr>
+			<th id="blank"></th>
+			<th id="military"></th>
+			<th id="coin"><img src="./image/coin.gif" alt="Coins"></th>
+			<th id="stages"><img src="./image/era.PNG" alt="Stages"></th>
+			<th id="blue"></th>
+			<th id="yellow"></th>
+			<th id="science"></th>
+			<th id="purple"></th>
+			<th id="leaders"><img src="./image/leader.PNG" alt="Leaders/Black"></th>
+			<th id="tiles"><img src="./image/tile.PNG" alt="Tiles"></th>
+		</tr>
+		</tbody>
+	</table>
+
+	<script src="./js/main.js" type="text/javascript"></script>
+</body>
+</html>
