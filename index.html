@@ -1,33 +1,336 @@
-<!doctype html>
-<html>
-<head>
-	<title>Score Tracker</title>
-	<link rel="stylesheet" type="text/css" href="./style/style.css">
-</head>
-<body>
-	<button type="button" onClick="addPlayers(1)">Add New Player</button><br>
-	<form id='numPlayerForm' name="numPlayer" onsubmit="addPlayers(playerNumber.value)">
-		Number of Players
-		<input type="number" id="playerNumber" value=0>
-	</form>
-	<button id='enterButton' type="button" onClick="addPlayers(playerNumber)">Enter</button>
-	<table class="scoreBoard"> 
-		<tbody id="scoreBoardBody">
-		<tr>
-			<th id="blank"></th>
-			<th id="military"></th>
-			<th id="coin"><img src="./image/coin.gif" alt="Coins"></th>
-			<th id="stages"><img src="./image/era.PNG" alt="Stages"></th>
-			<th id="blue"></th>
-			<th id="yellow"></th>
-			<th id="science"></th>
-			<th id="purple"></th>
-			<th id="leaders"><img src="./image/leader.PNG" alt="Leaders/Black"></th>
-			<th id="tiles"><img src="./image/tile.PNG" alt="Tiles"></th>
-		</tr>
-		</tbody>
-	</table>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-	<script src="./js/main.js" type="text/javascript"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JeongHoon Park</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fonts from Font Awsome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Magnific popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Vegas slider -->
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Color styles -->
+    <link rel="stylesheet" href="css/colors/blue.css">
+    
+    <!-- Feature detection -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]> -->
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <!-- <![endif] -->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#page-welcome"><i class="fa fa-fw fa-home"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#page-profile"><i class="far fa-user"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a href="index.html#page-experience"><i class="fas fa-save"></i> Experience</a>
+                    </li>
+                    <li>
+                        <a href="index.html#page-education"><i class="far fa-folder"></i> Education</a>
+                    </li>
+                    <li>
+                        <a href="index.html#page-skills"><i class="fas fa-medal"></i> Skills</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- welcome begins -->
+    <section id="page-welcome" class="page-welcome">
+        <div >
+            <ul class="slider-controls">
+                <li>
+                    <a id="vegas-next" class="next" href="javascript:void(0)"></a>
+                </li>
+                <li>
+                    <a id="vegas-prev" class="prev" href="javascript:void(0)"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <header class="centered">
+                    <h1>JEONGHOON PARK</h1>
+                    <p>ARTIST/DESIGNER &middot SOFTWARE DEVELOPER </p>
+                </header>
+                <div class="social-icons">
+                    <a href="https://ca.linkedin.com/in/jeonghoon-park" class="btn btn-round btn-clear btn-linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:jeong.h.park@hotmail.com" class="btn btn-round btn-clear btn-google"><i class="far fa-envelope"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- welcome ends -->
+    <!-- profile begins -->
+    <section id="page-profile" class="page-profile">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Personal Profile</h2>
+                <div class="spacer"></div>
+                <p class="section-subtitle">About me </p>
+            </header>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="profile"><img src="img/profile.png" alt="profile" />
+                    </div>
+                </div>
+                <div class="col-md-9 intro-wrapper">
+                    <p>Let me briefly introduce myself. <br>
+                    My name is John short for JeongHoon <br>
+                    and I am currently residing in Toronto, Canada. <br>
+                    I recently (Summer of 2018) graduated from University <br>
+                    of Toronto with Honours Bachelor of Science by specializing <br>
+                    in Computer Science. Thoroughout my university career, I have been <br>
+                    much interested in Artificial Intelligent and web development and at the moment <br>
+                    I am very much seeking for an opportunity to learn about the field as well as the industry </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- profile ends -->
+        <!-- experience begins -->
+    <section id="page-experience" class="page-experience">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title"><span>Experience</span></h2>
+                <div class="spacer"></div>
+                <p class="section-subtitle">Software related experiences</p>
+            </header>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-1 ">
+                    <article class="experience">
+                        <img src="img/profile.png" alt="profile" />
+                        <header>
+                            <h3>Authenticiti</h3>
+                            <p>FullStack Developer </p>
+                        </header>
+                        <p></p>
+                    </article>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="experience">
+                        <header>
+                            <h3>ThinkSquare</h3>
+                            <p>Full-Stack Developer</p>
+                        </header>
+                        <p>Start-up that provides a job matching platform using AI algorithms (SVM, Naives Bayes Classification). Mostly utilized JavaScript and Java for implementation.</p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="experience">
+                        <header>
+                            <h3>Republic of Korean Air Force</h3>
+                            <p>Sergeant 2012 - 2014</p>
+                        </header>
+                        <p>Part of a specialized intelligence unit. Team Leader. Daily guided a squadron of 25 and ensured the safety and health condition of each member by interacting.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="experience">
+                        <header>
+                            <h3>TravelR</h3>
+                            <p>Full-Stack Developer </p>
+                        </header>
+                        <p>Project which utilizes Teleport RESTful API to aid users to convinently search for quliaty of life among various urban araes around the world.</p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="experience">
+                        <header>
+                            <h3>DES</h3>
+                            <p>Full-Stack Developer</p>
+                        </header>
+                        <p>Android based mobile dating application which allows users within a close approximations based on gps location to communicate and interact with another.</p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="experience">
+                        <header>
+                            <h3>University of Toronto</h3>
+                            <p>Computer Support Specialist</p>
+                        </header>
+                        <p>Maintain and troubleshoot faculty of 250 staffs' computer processing systems and network.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- experience ends -->
+    <!-- education begins -->
+    <section id="page-education" class="page-education">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title"><span>Education</span></h2>
+                <div class="spacer"></div>
+                <p class="section-subtitle"></p>
+            </header>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <article class="education">
+                        <header>
+                            <h3>American School of Antananarivo</h3>
+                            <p>High School, <strong>2008 - 2011</strong></p>
+                        </header>
+                        <p></p>
+                    </article>
+                </div>
+                <div class="col-md-6 text-center">
+                    <article class="education">
+                        <header>
+                            <h3>University of Toronto</h3>
+                            <p>Computer Science Specialist, <strong>Complete</strong></p>
+                        </header>
+                        <p></p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- education ends -->
+    <!-- skills begins -->
+    <section id="page-skills" class="page-skills">
+        <div class="container">
+
+            <header class="section-header">
+                <h2 class="section-title"><span>Skills</span></h2>
+                <div class="spacer"></div>
+            </header>
+            <div class="row">
+                <div class="col-md-3">
+                    <span class="chart" data-percent="75">
+                      <span class="percent"></span>
+                    <h3>Java</h3>
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <span class="chart" data-percent="75">
+                      <span class="percent"></span>
+                    <h3>React</h3>
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <span class="chart" data-percent="70">
+                      <span class="percent"></span>
+                    <h3>JavaScript/jQuery</h3>
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <span class="chart" data-percent="90">
+                      <span class="percent"></span>
+                    <h3>Python</h3>
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <span class="chart" data-percent="100">
+                      <span class="no-percent"></span>
+                    <h3>Korean</h3>
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <span class="chart" data-percent="100">
+                      <span class="no-percent"></span>
+                    <h3>Github</h3>
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <span class="chart" data-percent="100">
+                      <span class="no-percent"></span>
+                    <h3>English</h3>
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <span class="chart" data-percent="100">
+                      <span class="no-percent"></span>
+                    <h3>Linux</h3>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- skills ends -->
+    <!-- contact begins -->
+    <section id="page-contact" class="page-contact">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title"><span>Contact</span></h2>
+                <div class="spacer"></div>
+                <p class="section-subtitle">Get in touch. </p>
+            </header>
+            <div class="row">
+                <div class="col-sm-12 contact-info text-center">
+                    <p><i class="fa fa-phone"></i> (647) 545-3832</p>
+                    <p><i class="fa fa-envelope-o"></i> jeong.h.park@hotmail.com</p>
+                </div>
+            </div>
+            <!-- End row -->
+
+        </div>
+    </section>
+    <!-- contact ends -->
+
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="js/vegas.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/main.js"></script>
+	
 </body>
+
 </html>
